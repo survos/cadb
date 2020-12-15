@@ -1,0 +1,4 @@
+home:
+    title: 'capi Title'
+    intro: 'Intro to capi Title'
+    description: 'capi *Description*, in _markdown_'

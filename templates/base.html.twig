@@ -1,0 +1,41 @@
+{% extends "@SurvosBase/base.html.twig" %}
+
+{% block body 'hello' %}
+
+{#
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+#}
+
+{% block page_title 'Shakespeare' %}
+{% block page_subtitle 'Works, Characters, and a bunch of cool tools' %}
+
+{% block page_content_before %}
+    {% embed '@AdminLTE/Widgets/box-widget.html.twig' %}
+        {% block box_title %}Tech Notes{% endblock %}
+        {% block box_body %}
+            <div class="callout callout-info">
+                {{ '%s.notes'|format(app.request.get('_route'))|trans|markdown   }}
+            </div>
+        {% endblock %}
+    {% endembed %}
+
+{% endblock %}
+
+{% block footer %}
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+            <strong>Gitub:</strong> github.com/survos/bard
+        </div>
+        Data from opensourceshakepeare.org
+    </footer>
+{% endblock %}
+
+{% block logo_large %} {{ 'home.title'|trans }} {% endblock %}
+
+
