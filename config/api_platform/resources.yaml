@@ -1,0 +1,14 @@
+App\Entity\CaObjects:
+  shortName: 'Objects'                   # optional
+  description: 'The characters acting the play'
+  attributes:                          # optional
+    pagination_items_per_page: 30   # optional
+    normalization_context:
+      groups: ['read']
+    denormalization_context:
+      groups: ['write']
+
+
+#App\Entity\Work:
+#  shortName: 'Plays'                   # optional
+#  description: 'aka Works' # optional

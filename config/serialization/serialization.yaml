@@ -1,0 +1,7 @@
+# we in
+App\Entity\CaObjects:
+  attributes:
+    objectId:
+      groups: ['read']
+    idno:
+      groups: ['read']
