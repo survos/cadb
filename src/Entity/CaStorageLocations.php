@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="ca_storage_locations", indexes={@ORM\Index(name="idno", columns={"idno"}), @ORM\Index(name="i_hier_left", columns={"hier_left"}), @ORM\Index(name="i_loc_filter", columns={"location_id", "deleted", "access"}), @ORM\Index(name="i_submission_user_id", columns={"submission_user_id"}), @ORM\Index(name="i_submission_via_form", columns={"submission_via_form"}), @ORM\Index(name="i_parent_id", columns={"parent_id"}), @ORM\Index(name="idno_sort", columns={"idno_sort"}), @ORM\Index(name="i_hier_right", columns={"hier_right"}), @ORM\Index(name="i_submission_group_id", columns={"submission_group_id"}), @ORM\Index(name="i_source_id", columns={"source_id"}), @ORM\Index(name="i_type_id", columns={"type_id"}), @ORM\Index(name="i_view_count", columns={"view_count"}), @ORM\Index(name="i_submission_status_id", columns={"submission_status_id"})})
  * @ORM\Entity
  */
-class CaStorageLocations
+class CaStorageLocations extends CaBaseEntity
 {
     /**
      * @var int

@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="ca_list_items", indexes={@ORM\Index(name="i_idno", columns={"idno"}), @ORM\Index(name="i_hier_right", columns={"hier_right"}), @ORM\Index(name="i_source_id", columns={"source_id"}), @ORM\Index(name="i_list_id", columns={"list_id"}), @ORM\Index(name="i_idno_sort", columns={"idno_sort"}), @ORM\Index(name="i_value_text", columns={"item_value"}), @ORM\Index(name="i_item_filter", columns={"item_id", "deleted", "access"}), @ORM\Index(name="i_parent_id", columns={"parent_id"}), @ORM\Index(name="i_hier_left", columns={"hier_left"}), @ORM\Index(name="i_type_id", columns={"type_id"})})
  * @ORM\Entity
  */
-class CaListItems
+class CaListItems extends CaBaseEntity
 {
     /**
      * @var int
@@ -416,6 +416,11 @@ class CaListItems
         $this->type = $type;
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->getIdno();
     }
 
 

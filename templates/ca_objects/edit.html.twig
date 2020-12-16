@@ -1,0 +1,11 @@
+{% extends "ca_objects/base.html.twig" %}
+
+{% block body %}
+    <h1>Edit CaObjects</h1>
+
+    {{ include('ca_objects/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('ca_objects_index') }}">back to list</a>
+
+    {{ include('ca_objects/_delete_form.html.twig') }}
+{% endblock %}

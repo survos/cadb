@@ -435,4 +435,8 @@ class CaObjectLots
     }
 
 
+    public function __toString()
+    {
+        return (string)$this->getLotId();
+    }
 }

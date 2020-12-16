@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CaObjects index{% endblock %}
+
+
+{% block body %}
+    <h1>CaObjects index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>actions</th>
+                <th>ObjectId</th>
+                <th>IsTemplate</th>
+                <th>CommentingStatus</th>
+                <th>TaggingStatus</th>
+                <th>RatingStatus</th>
+                <th>ViewCount</th>
+                <th>Idno</th>
+                <th>IdnoSort</th>
+                <th>SourceInfo</th>
+                <th>HierObjectId</th>
+                <th>HierLeft</th>
+                <th>HierRight</th>
+                <th>Extent</th>
+                <th>ExtentUnits</th>
+                <th>Access</th>
+                <th>Status</th>
+                <th>Deleted</th>
+                <th>Rank</th>
+                <th>AclInheritFromCaCollections</th>
+                <th>AclInheritFromParent</th>
+                <th>AccessInheritFromParent</th>
+                <th>AccessionSdatetime</th>
+                <th>AccessionEdatetime</th>
+                <th>DeaccessionSdatetime</th>
+                <th>DeaccessionEdatetime</th>
+                <th>IsDeaccessioned</th>
+                <th>DeaccessionNotes</th>
+                <th>CurrentLocClass</th>
+                <th>CurrentLocSubclass</th>
+                <th>CurrentLocId</th>
+                <th>DeaccessionDisposalSdatetime</th>
+                <th>DeaccessionDisposalEdatetime</th>
+                <th>SubmissionUserId</th>
+                <th>SubmissionGroupId</th>
+                <th>SubmissionStatusId</th>
+                <th>SubmissionViaForm</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ca_object in ca_objects %}
+            <tr>
+                <td>
+                    <a href="{{ path('ca_objects_show', ca_object.rp) }}">
+                        <span class="fas fa-file-invoice"></span></a>
+
+                    </a>
+                    <a href="{{ path('ca_objects_edit', ca_object.rp) }}">
+                        <span class="fas fa-edit"></span></a>
+                </td>
+
+                                <td>{{ ca_object.objectId }}</td>
+                <td>{{ ca_object.isTemplate ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.commentingStatus ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.taggingStatus ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.ratingStatus ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.viewCount }}</td>
+                <td>{{ ca_object.idno }}</td>
+                <td>{{ ca_object.idnoSort }}</td>
+                <td>{{ ca_object.sourceInfo }}</td>
+                <td>{{ ca_object.hierObjectId }}</td>
+                <td>{{ ca_object.hierLeft }}</td>
+                <td>{{ ca_object.hierRight }}</td>
+                <td>{{ ca_object.extent }}</td>
+                <td>{{ ca_object.extentUnits }}</td>
+                <td>{{ ca_object.access ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.status ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.deleted ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.rank }}</td>
+                <td>{{ ca_object.aclInheritFromCaCollections ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.aclInheritFromParent ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.accessInheritFromParent ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.accessionSdatetime }}</td>
+                <td>{{ ca_object.accessionEdatetime }}</td>
+                <td>{{ ca_object.deaccessionSdatetime }}</td>
+                <td>{{ ca_object.deaccessionEdatetime }}</td>
+                <td>{{ ca_object.isDeaccessioned ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.deaccessionNotes }}</td>
+                <td>{{ ca_object.currentLocClass ? 'Yes' : 'No' }}</td>
+                <td>{{ ca_object.currentLocSubclass }}</td>
+                <td>{{ ca_object.currentLocId }}</td>
+                <td>{{ ca_object.deaccessionDisposalSdatetime }}</td>
+                <td>{{ ca_object.deaccessionDisposalEdatetime }}</td>
+                <td>{{ ca_object.submissionUserId }}</td>
+                <td>{{ ca_object.submissionGroupId }}</td>
+                <td>{{ ca_object.submissionStatusId }}</td>
+                <td>{{ ca_object.submissionViaForm }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="37">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('ca_objects_new') }}">Create new</a>
+{% endblock %}

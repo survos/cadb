@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BASE CaObjects{% endblock %}
+
+{% block page_title %}{{ ca_object }}{% endblock %}
+{% block page_subtitle %}{{ app.request.get('_route') }}{% endblock %}
+
+{% block body %}
+
+If we have a CaObjects entity, we should display it here.
+
+{% endblock %}

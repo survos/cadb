@@ -6,6 +6,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Survos\BaseBundle\Entity\SurvosBaseEntity;
 
 /**
  * CaObjects
@@ -15,7 +16,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ApiResource()
  *
  */
-class CaObjects
+class CaObjects extends SurvosBaseEntity
 {
     /**
      * @var int
@@ -958,4 +959,8 @@ class CaObjects
     }
 
 
+    function getUniqueIdentifiers()
+    {
+        return ['caObjectId' => $this->getObjectId()];
+    }
 }
