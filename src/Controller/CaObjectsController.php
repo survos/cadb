@@ -16,6 +16,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 /**
  * @Route("/ca/objects")
  */
+
 class CaObjectsController extends AbstractController
 {
     /**

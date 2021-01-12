@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DataProfileController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Data Profiles</h1>
+
+    {% for name, profile in profiles %}
+        <h3>{{ profile.profileName }} <small>{{ name }}</small></h3>
+        <i>{{ profile.profileDescription is iterable ? profile.profileDescription|join(',') : profile.profileDescription }}</i>
+        {{ profile|keys|join(',') }}
+        {% for pvar, pval in profile %}
+            <h5>{{ pvar }}</h5>
+    {% endfor %}
+
+        <table>
+            {% for mde in profile.elementSets.metadataElement  %}
+                <tr>
+                    {% set a = attribute(mde, '@attributes') %}
+                    <td>{{ a.code }}</td>
+                    <td>{{ a.datatype }}</td>
+                    <td>{{ a.list|default('') }}</td>
+                    <td>
+                    </td>
+                </tr>
+
+
+            {% endfor %}
+
+        </table>
+    {% endfor %}
+
+</div>
+{% endblock %}

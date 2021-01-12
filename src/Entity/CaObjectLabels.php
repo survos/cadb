@@ -71,7 +71,7 @@ class CaObjectLabels
 
     /**
      * @ORM\ManyToOne(targetEntity=CaObjects::class, inversedBy="objectLabels")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(referencedColumnName="object_id", nullable=false)
      */
     private $object;
 

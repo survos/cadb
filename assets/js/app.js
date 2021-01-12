@@ -4,7 +4,6 @@ require('popper.js');
 
 const routes = require('../../public/js/fos_js_routes.json');
 import Routing from '../../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.js';
-// import Routing from '../../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.min.js';
 Routing.setRoutingData(routes);
 global.Routing = Routing;
 
@@ -34,6 +33,7 @@ require('datatables.net-bs4');
 require('datatables.net-scroller-bs4');
 require('datatables.net-buttons-bs4');
 require('datatables.net-select-bs4');
+require('datatables.net-searchpanes-bs4');
 
 if (x) {
     const dataTableElements = $('.js-datatable');
@@ -47,7 +47,7 @@ if (x) {
         console.log('data is ', options);
 
         const o = {
-            dom: 'ftir',
+            dom: 'Pftir',
             'scroller': true,
             'scrollX': true,
             'scrollY': '30vh',

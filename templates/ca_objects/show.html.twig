@@ -1,9 +1,14 @@
 {% extends "ca_objects/base.html.twig" %}
 
 {% block body %}
-    <h1>CaObjects</h1>
+    <h1>CaObjects {{ ca_object.objectId }}</h1>
 
-    <table class="table">
+    {% for label in ca_object.objectLabels %}
+        <li>{{ label.name }}</li>
+    {% endfor %}
+
+
+    <table class="table table-datatable js-datatable">
         <tbody>
             <tr>
                 <th>ObjectId</th>
