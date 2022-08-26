@@ -38,7 +38,7 @@ class CaSitePages
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="description", type="text", nullable=false)
      */
     private $description;
 
@@ -59,7 +59,7 @@ class CaSitePages
     /**
      * @var string
      *
-     * @ORM\Column(name="keywords", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="keywords", type="text", nullable=false)
      */
     private $keywords;
 

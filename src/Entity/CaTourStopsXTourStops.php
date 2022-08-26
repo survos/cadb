@@ -24,7 +24,7 @@ class CaTourStopsXTourStops
     /**
      * @var string
      *
-     * @ORM\Column(name="source_info", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="source_info", type="text", nullable=false)
      */
     private $sourceInfo;
 

@@ -1,6 +1,6 @@
 App\Entity\CaObjects:
   shortName: 'Objects'                   # optional
-  description: 'The characters acting the play'
+  description: 'Physical objects in the collection'
   attributes:                          # optional
     pagination_items_per_page: 30   # optional
     normalization_context:
@@ -8,7 +8,13 @@ App\Entity\CaObjects:
     denormalization_context:
       groups: ['write']
 
+App\Entity\CaEntities:
+  shortName: 'People'                   # optional
+  description: '(CaEntities) people (author, artist, etc.)'
+  attributes:                          # optional
+    pagination_items_per_page: 30   # optional
+    normalization_context:
+      groups: ['read']
+    denormalization_context:
+      groups: ['write']
 
-#App\Entity\Work:
-#  shortName: 'Plays'                   # optional
-#  description: 'aka Works' # optional

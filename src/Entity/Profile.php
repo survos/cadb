@@ -37,6 +37,11 @@ class Profile
      */
     private $rawData = [];
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $xml;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Profile
     public function setRawData(?array $rawData): self
     {
         $this->rawData = $rawData;
+
+        return $this;
+    }
+
+    public function getXml(): ?string
+    {
+        return $this->xml;
+    }
+
+    public function setXml(string $xml): self
+    {
+        $this->xml = $xml;
 
         return $this;
     }

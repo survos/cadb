@@ -80,7 +80,7 @@ class CaUsers
     /**
      * @var string
      *
-     * @ORM\Column(name="volatile_vars", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="volatile_vars", type="text", nullable=false)
      */
     private $volatileVars;
 

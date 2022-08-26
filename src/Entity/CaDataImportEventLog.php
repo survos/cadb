@@ -38,7 +38,7 @@ class CaDataImportEventLog
     /**
      * @var string
      *
-     * @ORM\Column(name="message", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="message", type="text", nullable=false)
      */
     private $message;
 

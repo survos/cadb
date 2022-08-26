@@ -38,7 +38,7 @@ class CaSetItemLabels
     /**
      * @var string
      *
-     * @ORM\Column(name="caption", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="caption", type="text", nullable=false)
      */
     private $caption;
 

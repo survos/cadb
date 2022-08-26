@@ -144,7 +144,7 @@ class CaListItems extends CaBaseEntity
     private $list;
 
     /**
-     * @var \CaListItems
+     * @var CaListItems
      *
      * @ORM\ManyToOne(targetEntity="CaListItems")
      * @ORM\JoinColumns({
@@ -154,7 +154,7 @@ class CaListItems extends CaBaseEntity
     private $parent;
 
     /**
-     * @var \CaListItems
+     * @var CaListItems
      *
      * @ORM\ManyToOne(targetEntity="CaListItems")
      * @ORM\JoinColumns({
@@ -164,7 +164,7 @@ class CaListItems extends CaBaseEntity
     private $source;
 
     /**
-     * @var \CaListItems
+     * @var CaListItems
      *
      * @ORM\ManyToOne(targetEntity="CaListItems")
      * @ORM\JoinColumns({

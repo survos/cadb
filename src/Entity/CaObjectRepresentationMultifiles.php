@@ -31,7 +31,7 @@ class CaObjectRepresentationMultifiles
     /**
      * @var string
      *
-     * @ORM\Column(name="resource_path", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="resource_path", type="text", nullable=false)
      */
     private $resourcePath;
 

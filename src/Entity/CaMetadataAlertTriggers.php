@@ -38,7 +38,7 @@ class CaMetadataAlertTriggers
     /**
      * @var string
      *
-     * @ORM\Column(name="element_filters", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="element_filters", type="text", nullable=false)
      */
     private $elementFilters;
 

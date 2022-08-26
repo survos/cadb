@@ -38,14 +38,14 @@ class CaRelationshipTypeLabels
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="description", type="text", nullable=false)
      */
     private $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description_reverse", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="description_reverse", type="text", nullable=false)
      */
     private $descriptionReverse;
 

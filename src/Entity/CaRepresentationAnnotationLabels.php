@@ -24,14 +24,14 @@ class CaRepresentationAnnotationLabels
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="name", type="text", nullable=false)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="name_sort", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="name_sort", type="text", nullable=false)
      */
     private $nameSort;
 

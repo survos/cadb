@@ -31,7 +31,7 @@ class CaMetadataDictionaryRules
     /**
      * @var string
      *
-     * @ORM\Column(name="expression", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="expression", type="text", nullable=false)
      */
     private $expression;
 

@@ -38,7 +38,7 @@ class CaMediaContentLocations
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="content", type="text", nullable=false)
      */
     private $content;
 

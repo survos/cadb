@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile {{ filename }}{% endblock %}
+
+{% macro array_as_li(pval) %}
+    {% if pval is not empty %}
+{#        {% if is_iterable(pval) %}#}
+{#        iterable: {{ is_object(pval) ? get_class(pval) : (is_numeric_array(pval) ? 'numeric_array' : is_iterable(pval) ? 'array' : 'scalar') }}#}
+{#            {% else %}#}
+{#                scalar#}
+{#                {% endif %}#}
+        {% if is_iterable(pval) %}
+            <ol>
+                {% for x,y in pval %}
+                    {% if y is not empty %}
+                    <li>
+                        {{ not is_numeric(x) ? x ~ ':'  }}
+                        {{ _self.array_as_li(y) }}
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ol>
+        {% else %}
+            {{ pval }}
+        {% endif %}
+    {% endif %}
+
+{% endmacro %}
+{% block body %}
+
+    <h1>Data Profile: {{ filename }}</h1>
+
+    <p>
+        These have simply been parsed directly from the XML, no mapping to entities.
+    </p>
+        <h3>{{ profile.profileName }} <small>{{ filename }}</small></h3>
+        <i>{{ profile.profileDescription is iterable ? profile.profileDescription|join(',') : profile.profileDescription }}</i>
+
+    {{ block('mde') }}
+    <hr />
+    {% for pvar, pval in profile %}
+            <h5>{{ pvar }}</h5>
+            <ol>
+                {{ _self.array_as_li(pval) }}
+
+            </ol>
+        {% endfor %}
+
+
+{% endblock %}
+
+{% block mde %}
+
+<h4>MetaData Elements</h4>
+<table class="table js-datatable table-striped table-condensed">
+    <thead>
+    <tr>
+        <th>@code</th>
+        <th>Type</th>
+        <th>List</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for mde in profile.elementSets.metadataElement  %}
+        <tr>
+            {% set a = attribute(mde, '@attributes') %}
+            <td>{{ a.code }}</td>
+            <td>{{ a.datatype }}</td>
+            <td>{{ a.list|default('') }}</td>
+            <td>
+                </td>
+        </tr>
+
+
+    {% endfor %}
+    </tbody>
+
+</table>
+
+{% endblock %}

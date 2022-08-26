@@ -80,14 +80,14 @@ class CaTaskQueue
     /**
      * @var string
      *
-     * @ORM\Column(name="parameters", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="parameters", type="text", nullable=false)
      */
     private $parameters;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="notes", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="notes", type="text", nullable=false)
      */
     private $notes;
 

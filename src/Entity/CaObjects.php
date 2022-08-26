@@ -206,7 +206,7 @@ class CaObjects extends SurvosBaseEntity
     /**
      * @var string
      *
-     * @ORM\Column(name="deaccession_notes", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="deaccession_notes", type="text", nullable=false)
      */
     private $deaccessionNotes;
 
@@ -284,14 +284,14 @@ class CaObjects extends SurvosBaseEntity
     private $acquisitionType;
 
     /**
-     * @var \CaListItems
+     * @var CaListItems
      *
      * @ORM\ManyToOne(targetEntity="CaListItems")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="circulation_status_id", referencedColumnName="item_id")
      * })
      */
-    private $circulationStatus;
+    private CaListItems $circulationStatus;
 
     /**
      * @var \CaListItems

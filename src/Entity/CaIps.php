@@ -59,7 +59,7 @@ class CaIps
     /**
      * @var string
      *
-     * @ORM\Column(name="notes", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="notes", type="text", nullable=false)
      */
     private $notes;
 

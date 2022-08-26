@@ -80,7 +80,7 @@ class CaItemComments
     /**
      * @var string|null
      *
-     * @ORM\Column(name="comment", type="text", length=65535, nullable=true, options={"default"="NULL"})
+     * @ORM\Column(name="comment", type="text", nullable=true, options={"default"="NULL"})
      */
     private $comment = 'NULL';
 

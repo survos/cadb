@@ -31,7 +31,7 @@ class CaDataImportEvents
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="description", type="text", nullable=false)
      */
     private $description;
 
@@ -45,7 +45,7 @@ class CaDataImportEvents
     /**
      * @var string
      *
-     * @ORM\Column(name="source", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="source", type="text", nullable=false)
      */
     private $source;
 

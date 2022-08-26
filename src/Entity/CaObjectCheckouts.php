@@ -59,14 +59,14 @@ class CaObjectCheckouts
     /**
      * @var string
      *
-     * @ORM\Column(name="checkout_notes", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="checkout_notes", type="text", nullable=false)
      */
     private $checkoutNotes;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="return_notes", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="return_notes", type="text", nullable=false)
      */
     private $returnNotes;
 

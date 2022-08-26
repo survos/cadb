@@ -73,7 +73,7 @@ class CaSearchLog
     /**
      * @var string
      *
-     * @ORM\Column(name="details", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="details", type="text", nullable=false)
      */
     private $details;
 

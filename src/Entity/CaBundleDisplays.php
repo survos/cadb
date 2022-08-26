@@ -59,7 +59,7 @@ class CaBundleDisplays
     /**
      * @var string
      *
-     * @ORM\Column(name="settings", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="settings", type="text", nullable=false)
      */
     private $settings;
 

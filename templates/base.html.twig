@@ -12,8 +12,8 @@
 {% endblock %}
 #}
 
-{% block page_title 'Shakespeare' %}
-{% block page_subtitle 'Works, Characters, and a bunch of cool tools' %}
+{% block page_title 'CAPI' %}
+{% block page_subtitle 'Collective Access API' %}
 
 {% block page_content_before %}
     {% embed '@AdminLTE/Widgets/box-widget.html.twig' %}
@@ -32,10 +32,16 @@
         <div class="float-right d-none d-sm-block">
             <strong>Gitub:</strong> github.com/survos/bard
         </div>
-        Data from opensourceshakepeare.org
+        From https://collectiveaccess.org/
     </footer>
 {% endblock %}
 
 {% block logo_large %} {{ 'home.title'|trans }} {% endblock %}
+
+{% block navbar_links %}
+    <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{ path('api_entrypoint') }}" target="_blank" class="nav-link">API</a>
+    </li>
+{% endblock %}
 
 
